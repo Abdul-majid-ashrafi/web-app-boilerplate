@@ -2,7 +2,7 @@ import React, { Component } from 'react'
 import { Route, Router, Switch } from "react-router-dom";
 import { createBrowserHistory } from 'history'
 import { TODO } from "../conainers";
-
+import 'antd/dist/antd.css';
 
 class WebRouting extends Component {
     constructor(props) {

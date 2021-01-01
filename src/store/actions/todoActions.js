@@ -1,7 +1,9 @@
+import { toast } from '../../shared';
 import { types } from '../actionTypes';
 
 // for add TODO in list
 export const addTodo = (todo) => (dispatch) => {
+    toast("success", "Added");
     dispatch({ type: types.ADD_TODO, todo });
 };
 
