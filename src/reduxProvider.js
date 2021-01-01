@@ -2,7 +2,7 @@ import React from 'react'
 import { Provider } from "react-redux";
 import store from "./store";
 import WebRouting from "./routing/webRouting";
-import AppNavigatior from './routing/appNavigatior';
+import AppNavigatior from './routing/appRouting';
 
 export default function App() {
     let Component;

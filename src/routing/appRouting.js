@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
 import { NavigationContainer } from '@react-navigation/native';
 import { createStackNavigator } from '@react-navigation/stack';
-import { TODO } from "../conainer";
+import { TODO } from "../conainers";
 
 const Stack = createStackNavigator();
 
