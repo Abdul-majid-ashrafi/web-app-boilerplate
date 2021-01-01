@@ -1,12 +1,9 @@
-import { types } from '../actionTypes'
-
+import { types } from '../actionTypes';
 
 // initeat State
 let initialState = {
     todo: [],
 };
-
-
 
 function todoReducer(todos = initialState, action) {
     switch (action.type) {
