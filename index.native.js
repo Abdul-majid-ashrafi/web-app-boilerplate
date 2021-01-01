@@ -3,8 +3,8 @@
  */
 
 import { AppRegistry } from 'react-native';
-// import App from './App';
-import TODO from './src/conainer/todo'
+import App from './src/reduxProvider';
 import { name as appName } from './app.json';
+import 'react-native-gesture-handler';
 
-AppRegistry.registerComponent(appName, () => TODO);
+AppRegistry.registerComponent(appName, () => App);

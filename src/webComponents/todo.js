@@ -1,10 +1,20 @@
 import React from 'react';
 
 const WebTodoComponent = (props) => {
-    const todos = props.todos.map((val, i) => {
+    const {
+        removeCompeleteTodo,
+        onChangeHandler,
+        removeTodo,
+        reduxTodo,
+        addTodo,
+        item,
+    } = props;
+    // render Todo list
+    const todos = reduxTodo.map((val, i) => {
         return (
-            <div key={i}>
-                <h4 style={{ fontSize: 36, color: "red" }}>{val}</h4>
+            <div key={i} style={{ display: "flex", justifyContent: "flex-start", alignItems: "center" }}>
+                <h4 style={{ fontSize: 36, color: "red", margin: "10px" }}>{val}</h4>
+                <button onClick={() => removeTodo(i)}>Remove</button>
             </div>
         )
     })
@@ -13,13 +23,13 @@ const WebTodoComponent = (props) => {
             <h1>Todo</h1>
             <input
                 placeholder="Write something"
-                value={props.item}
-                onChange={(evnt) => { props.onChangeHandler('item', evnt.target.value) }}
+                value={item}
+                onChange={(evnt) => { onChangeHandler('item', evnt.target.value) }}
                 style={{ borderBottomWidth: 1, padding: 5, fontSize: 18 }}
             />
             <br />
-            <button onClick={props.addTodo}>Add</button>
-            <br />
+            <button onClick={addTodo}>Add</button>
+            <button onClick={removeCompeleteTodo}>Remove All</button>
             <hr />
             {todos}
         </div>

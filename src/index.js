@@ -1,8 +1,5 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import TODO from './conainer/todo';
+import App from './reduxProvider';
 
-ReactDOM.render(
-    <TODO />,
-    document.getElementById('root'),
-);
+ReactDOM.render(<App />, document.getElementById('root'),);
