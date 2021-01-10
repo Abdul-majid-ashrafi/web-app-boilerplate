@@ -1,5 +1,6 @@
 // import { message } from 'antd';
-import Toast from 'react-native-simple-toast';
+const { Toast } = (typeof navigator !== 'undefined' && navigator.product === 'ReactNative') ? require('./nativeToast') : require('react');
+
 
 export const toast = (type, msg, duration = 4.5) => {
     if (typeof document != 'undefined') {
